@@ -1,0 +1,45 @@
+@mixin fontStyle {
+    color: $text-color ;
+    font-family: $font;
+}
+
+@mixin typography(){
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.home{
+    background-image: linear-gradient(to right ,rgba(4,9,30,0.7),rgba(43, 58, 119, 0.7)),url('../images/school-tools-3596680_1920.jpg');
+    background-size:cover ;
+    background-position: center;
+    width: 100%;
+    min-height: 625px;
+    
+    h1{
+        @include fontStyle();
+        font-size: 50px;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    p{
+        @include fontStyle();
+        @include typography();
+        width: 540px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .home{
+        h1{
+            font-size: 35px;
+        }
+
+        p{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@mixin fontStyle {
+    color: $text-color ;
+    font-family: $font;
+}
+@mixin listStyle {
+    box-sizing: border-box;
+    list-style: $decor;
+    padding-top: 15px;    
+}
+
+.footer{
+    background-color: $primary;
+    @include fontStyle();
+    display: $display;
+    
+    .links{        
+        
+        margin-top: 5%;
+        margin-left: 5%;
+        ul{
+            line-height: 30px;
+            @include listStyle();
+                li{              
+                    a{
+                        text-decoration: none;
+                        color: $text-color;
+                    }
+            }
+        }
+    }
+
+    .product-categories{
+        margin: 5% 0 5% 5%;
+        .product-list{
+            display: $display;
+            ul{
+                @include listStyle();
+                padding-left: 25px;
+                line-height: 30px;
+
+                &:first-of-type{
+                    padding-left: 0px  ;
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width:962px) {
+    .footer{
+        
+        flex-direction: column;
+        .product-categories{
+            .product-list{
+                flex-direction: column;
+
+                ul{
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+}

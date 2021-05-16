@@ -1,0 +1,45 @@
+@mixin fontStyle {
+    color: $text-color ;
+    font-family: $font;
+}
+@mixin typography(){
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.about-us{
+    background-image: linear-gradient(to right ,rgba(4,9,30,0.7),rgba(43, 58, 119, 0.7)),url('../images/stationery-1412848_1280.jpg');
+    background-size:cover ;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 100px;
+    
+    h1{
+        @include fontStyle();
+        font-size: 30px;
+    }
+
+    p{
+        @include fontStyle();
+        @include typography();
+        text-align: center;
+        padding:120px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .about-us{
+        h1{
+            font-size: 25px;;
+            text-align: center;
+        }
+
+        p{            
+            width: 88%;
+            font-size: 16px;
+            line-height: 24px;
+            padding:30px;
+        }
+    }
+}

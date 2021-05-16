@@ -1,0 +1,127 @@
+
+
+.header{ 
+    nav{
+        background-color:$primary;
+        display: $display;
+        justify-content: $space;
+        height: 60px;
+
+        h1{
+            position: $position;
+            top: 20px;
+            left: 5%;
+            color: $text-color ;
+            font-family: $font;
+        }
+        
+        a{
+            text-decoration: $decor;
+            font-family: $font;
+        }
+
+        
+          
+        .nav-list{
+            display: flex;
+            position: $position;
+            right: 20px;
+            ul{
+                list-style: $decor;
+                display: $display;
+            }
+            li{
+                padding: 20px 15px; 
+                & a{
+                color: $text-color;
+                text-decoration: $decor;
+                }
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+        
+    }
+        
+}
+
+@media screen and (min-width: 700px){
+    .header{
+        i{
+        visibility: hidden;
+    }
+    }
+}
+
+
+@media screen and (max-width:700px) {
+
+    .header{
+
+        nav{
+            justify-content: unset;
+            
+            #bar{
+                color: $text-color;        
+                position: $position;
+                top: 20px;
+                right: 30px;
+            }
+        
+
+            .nav-list{
+                position: $position;
+                background: #fff;
+                height: 685px;
+                width: 220px;
+                top: 0;
+                right: -220px;
+                z-index: 2;
+                text-align: left;
+
+                i{
+                    position: $position;
+                    top: 20px;
+                    left: 30px;
+                    font-size: 22px;
+                    cursor: pointer;
+                }
+
+                ul{
+                    padding: 30px;
+                    flex-direction: column;
+                    li{
+                        a{
+                            color: darkcyan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*
+@media screen and (width:768px) {
+    .header{
+        nav{
+            h1{
+                width: max-content;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:700px) and (max-width:1100px){
+    .header{
+        nav{
+            h1{
+                padding-left: 60px;
+            }
+        }
+    }
+}
+*/
