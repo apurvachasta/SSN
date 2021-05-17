@@ -68,6 +68,8 @@ body {
 
 @media screen and (max-width: 700px) {
   .header nav {
+    position: relative;
+    overflow-x: clip;
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;

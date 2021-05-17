@@ -60,6 +60,8 @@
     .header{
 
         nav{
+            position:relative;
+            overflow-x: clip;
             justify-content: unset;
             
             #bar{
