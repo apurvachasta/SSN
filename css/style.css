@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .header nav {
   background-color: rgba(15, 134, 163, 0.8);
   display: -webkit-box;
@@ -36,7 +32,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  right: 20px;
+  right: 50px;
 }
 
 .header nav .nav-list ul {
@@ -262,6 +258,9 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
+  .about-us {
+    padding: 70px 0;
+  }
   .about-us h1 {
     font-size: 25px;
     text-align: center;
@@ -270,7 +269,7 @@ body {
     width: 88%;
     font-size: 16px;
     line-height: 24px;
-    padding: 30px;
+    padding: 21px;
   }
 }
 
@@ -346,6 +345,9 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .product-body {
+    padding: 70px 0;
+  }
   .product-body h1 {
     font-size: 25px;
   }
@@ -439,6 +441,9 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .contactus {
+    padding: 70px 0;
+  }
   .contactus h1 {
     font-size: 25px;
     text-align: center;
